@@ -99,7 +99,7 @@ class TestPokemons:
     # Удаление покемона
         response_delete = auth_session.post(f'{self.base_url}/pokemons/knockout', json={"pokemon_id": pokemon_id})
         assert response_delete.status_code == 200
-        print(f"Покемон удаленн {pokemon_id}")
+        print(f"Покемон удален {pokemon_id}")
 
 
 
