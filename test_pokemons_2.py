@@ -49,7 +49,7 @@ class TestPokemon:
         response_body = response.json()
         assert response_body['message'] == 'Отсутвует pokemon_id', "Отсутствует message"
         assert response_body['status'] == 'error', "Отсутствует status"
-x-=cg
+
     def test_negative_path_pokemon(self, auth_session, create_pokemon, patch_body):
         response = auth_session.patch(f'{self.base_url}/pokemons', json=self.n_json_body)
         assert response.status_code == 422, 'Покемон обновился, статус код = {response.status_code}'
