@@ -27,7 +27,6 @@ def create_pokemon(auth_session):
 
     delete_response = auth_session.post(f"{base_url}/pokemons/knockout", json={"pokemon_id": pokemon_id})
     assert delete_response.status_code == 200, f'Покемон не удален = {delete_response.status_code}'
-    # return delete_response
 
 
 @pytest.fixture()
