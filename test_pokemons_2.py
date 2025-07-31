@@ -2,7 +2,7 @@ class TestPokemon:
     base_url = 'https://api.pokemonbattle-stage.ru/v2'
     pokemon_id = None
     photo_id = None
-    n_json_body = {"pokemon_id": "", "name": "п", "photo_id": -1}
+    n_json_body = {"pokemon_id": "", "name": "", "photo_id": -1}
 
     def test_get(self, auth_session):
         response = auth_session.get(f'{self.base_url}/pokemons')
